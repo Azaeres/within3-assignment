@@ -1,0 +1,14 @@
+query ZipCode($zipCode: String, $countryCode: String) {
+  fetchZipCode(zipCode: $zipCode, countryCode: $countryCode) {
+    postCode
+    country
+    countryAbbreviation
+    places {
+      name
+      state
+      stateAbbreviation
+      longitude
+      latitude
+    }
+  }
+}

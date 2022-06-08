@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+#root {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.zipcode-form {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 2rem 1rem;
+  background-color: rgba(0,0,0,.1);
+  border-radius: 10px;
+  min-width: 500px;
+}
+
+.zipcode-form input[type=submit] {
+  background-color: #115bfa;
+  color: white;
+  line-height: 2rem;
+  border: none;
+  padding: 0 15px; 
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  cursor: pointer;
+  font-weight: bold;
+}
+.zipcode-form input[type=submit]:hover {
+  color: rgba(255,255,255,0.4);
+}
+
+.zipcode-form .clear-history-button {
+  background-color: #eee;
+  color: #222;
+  line-height: 2rem;
+  border: none;
+  padding: 0 15px; 
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  cursor: pointer;
+  font-weight: bold;
+}
+.zipcode-form .clear-history-button:hover {
+  color: rgba(0,0,0,0.4);
+}
+
+.zipcode-form .clear-history-button:disabled {
+  background-color: #ddd;
+  color: #999;
+}
+
+.zipcode-form-line {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+  margin-bottom: 0.7rem;
+}
+
+.zipcode-form-line input {
+  margin-left: 1rem;
+}
+
+.zipcode-details {
+  margin-top: 2rem;
+}
+
+.history-list > div:first-child {
+  margin-bottom: 2rem;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  background-color: rgba(0,0,0,.1);
+  padding: 2rem;
+}
+
+.history-item-container {
+  margin-bottom: 1rem;
+  color: #777;
+  font-size: calc(5px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}

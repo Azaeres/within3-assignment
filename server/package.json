@@ -1,0 +1,19 @@
+{
+  "name": "within3-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.8.2",
+    "graphql": "^16.5.0",
+    "superagent": "^7.1.6",
+    "superagent-jsonapify": "^1.4.5"
+  }
+}
