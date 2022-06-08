@@ -7,7 +7,6 @@ superagentJsonapify(superagent);
 const BASE_URL = 'http://api.zippopotam.us';
 
 function fetchResponseByURL(relativeURL) {
-  // console.log('fetchResponseByURL', relativeURL, superagent)
   return superagent.get(`${BASE_URL}${relativeURL}`).then(res => res);
 }
 
@@ -31,12 +30,7 @@ function fetchZipCode(_, {zipCode, countryCode}) {
   });
 }
 
-// A schema is a collection of type definitions (hence "typeDefs")
-// that together define the "shape" of queries that are executed against
-// your data.
 const typeDefs = gql`
-  # # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
-
   type Place {
     name: String
     state: String
@@ -45,7 +39,6 @@ const typeDefs = gql`
     latitude: String
   }
 
-  # # This "Book" type defines the queryable fields for every book in our data source.
   type ZipCode {
     postCode: String
     country: String
@@ -53,42 +46,10 @@ const typeDefs = gql`
     places: [Place]
   }
 
-  # type Book {
-  #   title: String
-  #   author: Author
-  # }
-
-  # # The "Query" type is special: it lists all of the available queries that
-  # # clients can execute, along with the return type for each. In this
-  # # case, the "books" query returns an array of zero or more Books (defined above).
   type Query {
     fetchZipCode(zipCode: String, countryCode: String): ZipCode
   }
-
-  # type Query {
-  #   books: [Book]
-  # }
-
-  # type Author {
-  #   name: String
-  #   books: [Book]
-  # }
-
-  # type Mutation {
-  #   addBook(title: String, author: String): Book
-  # }
 `;
-
-// const books = [
-//   {
-//     title: "The Awakening",
-//     author: "Kate Chopin",
-//   },
-//   {
-//     title: "City of Glass",
-//     author: "Paul Auster",
-//   },
-// ];
 
 // Resolvers define the technique for fetching the types defined in the
 // schema. This resolver retrieves books from the "books" array above.
