@@ -2,8 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-It was fun working with Apollo! If given more time, I'd write more tests. I'd focus on areas regarding querying, state management, and caching.
-
 ## Available Scripts
 
 In the project directory, you can run:
